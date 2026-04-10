@@ -24,6 +24,7 @@
 | 범주형 변수 인코딩 | `country`, `gender` → Label Encoding      | 모델이 학습할 수 있도록 수치형 변환      |
 | 데이터 분할     | Train : Validation = 8 : 2 (`stratify=y`) | 타겟 불균형 유지 및 일반화 성능 확보     |
 | 데이터 스케일링   | StandardScaler 적용                         | 변수 간 스케일 차이 제거 및 모델 성능 향상 |
+
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder, StandardScaler
