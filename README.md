@@ -25,39 +25,6 @@
 | 데이터 분할     | Train : Validation = 8 : 2 (`stratify=y`) | 타겟 불균형 유지 및 일반화 성능 확보     |
 | 데이터 스케일링   | StandardScaler 적용                         | 변수 간 스케일 차이 제거 및 모델 성능 향상 |
 
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder, StandardScaler
-
-# 데이터 로드
-df = pd.read_csv("BankCustomerChurn.csv")
-
-# 1. 불필요 컬럼 제거
-df = df.drop(columns=["customer_id"])
-
-# 2. 범주형 변수 인코딩
-le = LabelEncoder()
-
-df["country"] = le.fit_transform(df["country"])
-df["gender"] = le.fit_transform(df["gender"])
-
-# 3. Feature / Target 분리
-X = df.drop("churn", axis=1)
-y = df["churn"]
-
-# 4. 데이터 분할 (Stratify 적용)
-X_train, X_valid, y_train, y_valid = train_test_split(
-    X, y,
-    test_size=0.2,
-    random_state=42,
-    stratify=y
-)
-
-# 5. 데이터 스케일링
-scaler = StandardScaler()
-
-X_train_scaled = scaler.fit_transform(X_train)
-X_valid_scaled = scaler.transform(X_valid)
 * **불필요한 컬럼 제거:** 데이터 간의 독립성을 보장하는 고유 식별자(`customer_id`)는 모델 학습에 불필요하여 제거.
 * **범주형 변수 수치화:** `country`(거주 국가) 및 `gender`(성별)와 같은 범주형 데이터는 패턴 학습을 위해 `LabelEncoder`를 적용하여 수치형으로 변환.
 * **데이터 분할:** 타겟 데이터의 불균형을 고려하여 `stratify=y` 옵션을 적용, Train과 Validation 데이터를 8:2 비율로 분할.
