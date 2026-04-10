@@ -25,11 +25,12 @@
 
 ## 6. EDA 및 해석 (Exploratory Data Analysis)
 <img width="1088" height="576" alt="바그래프" src="https://github.com/user-attachments/assets/7afb70f9-2041-4d02-8dbd-03a0e816254f" />
-<img width="1050" height="575" alt="꺾은선그래프" src="https://github.com/user-attachments/assets/6919cccb-8350-4cd0-9d8d-6b573fd6eec1" />
 
 * **국가별 이탈자 수 분석 (Countplot):**
     * 특정 국가에서 타 국가 대비 이탈자의 절대적 수와 비율이 뚜렷하게 높게 나타남.
     * **해석:** 해당 지역의 금융 환경이나 경쟁사의 마케팅 등 외부 요인이 이탈에 주요한 영향을 줄 수 있음을 시사함.
+<img width="1050" height="575" alt="꺾은선그래프" src="https://github.com/user-attachments/assets/6919cccb-8350-4cd0-9d8d-6b573fd6eec1" />
+
 * **나이대별 평균 이탈률 변화 분석 (Lineplot):**
     * 나이가 증가함에 따라 이탈률이 점진적으로 상승하며, 특히 50~60대 구간에서 최고치를 기록함.
     * **해석:** 고령층 고객을 위한 맞춤형 자산 관리 서비스나 유지 보상 프로그램의 부재가 이탈의 주요 원인일 수 있음을 파악.
