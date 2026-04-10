@@ -1,6 +1,8 @@
 
 # IMBK_Bank_Customer_Churn_ML
 
+https://github.com/wldnjs0839-cpu/IMBK_Bank_Customer_Churn_ML/blob/main/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D_%EC%BB%B4%ED%8E%98%ED%8B%B0%EC%85%98_BaseLine_%EB%B0%B1%EC%A7%80%EC%9B%90.ipynb
+
 ## 1. 프로젝트명
 고객 이탈 분류 ML 및 인사이트 분석 (Bank Customer Churn Prediction)
 
