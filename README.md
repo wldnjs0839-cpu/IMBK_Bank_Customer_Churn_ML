@@ -40,6 +40,8 @@
 
 * **AutoML (PyCaret):** 단순 정확도(Accuracy)보다 이탈 고객을 정확히 찾아내어 비즈니스 손실을 줄이는 데 중요한 **F1-Score**를 핵심 평가 지표로 설정. 전수 모델 비교 결과 성능이 우수한 상위 4개 부스팅 모델(CatBoost, LightGBM, GradientBoosting, XGBoost)을 최종 후보로 선정.
 * **Hyperparameter Tuning (Optuna):** 4개의 후보 모델 각각에 대해 Optuna를 활용하여 하이퍼파라미터 최적화 진행 (반복 횟수, 트리 깊이, 학습률 조절 등).
+<img width="967" height="647" alt="머신러닝" src="https://github.com/user-attachments/assets/ad8dbbac-b3dc-4646-b531-641ccfaacf8e" />
+
 * **SHAP Value 분석:** CatBoost 모델에 `shap.TreeExplainer`를 적용하여 기여도 시각화. 분석 결과 `Age`(나이), `Balance`(잔고), `Active Member`(활동 회원 여부)가 고객 이탈 결정에 가장 큰 영향을 미치는 변수로 확인됨.
 * **Stacking Pipeline:** 최적화된 4개의 단일 모델을 전방 모델(Base Estimator)로 배치하고, `LogisticRegression`을 후방 모델(Meta Model)로 결합하여 스태킹 앙상블 수행. 이를 통해 단일 모델 대비 성능 편차를 줄이고 예측의 일반화 성능 및 신뢰도를 향상함. (최종 Stacking F1-Score: 0.6027)
 
